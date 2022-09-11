@@ -1,0 +1,41 @@
+
+<html> 
+<head> 
+<title>Login Form</title> 
+</head> 
+<body> 
+<h1 align="center">Login Here...</h1> 
+<hr> <fieldset> <legend>Login Form </legend>
+  <form method="post" action="checklogin.php"> 
+  <table border="1" width="700" align="center"> 
+  <tr> <td>Login Name </td> <td><input type="text" name="t1"> </td> </tr> 
+  <tr> <td>Password </td> <td><input type="password" name="t2"></td> </tr> 
+  <tr> 
+<td> </td> 
+<td> <input type="submit" name="b1" value="Login.."> <input type="Reset" name="b1" value="Cancel.."> </td> </tr> 
+</table> 
+</form> 
+</fieldset> 
+ </body> 
+</html>
+
+
+<?php 
+#program demo of conditional statement to check login 
+ $user=$_POST["t1"]; 
+ $pass=$_POST["t2"];  
+ if($user=="admin" && $pass=="1234")
+  { print "<h1>Welcome Admin..</h1><hr>";
+   }
+   elseif($user=="cocsit" && $pass=="9090")
+    { 
+    print "<h1>Welcome cocsit..</h1><hr>";
+     } 
+     else 
+     { 
+     print "<h1>Login Fail,<br> Please Check again"; 
+     }
+     ?>
+     
+
+ ?> 
